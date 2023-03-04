@@ -357,8 +357,8 @@ void BLASTBufferQueue::transactionCallback(nsecs_t /*latchTime*/, const sp<Fence
                     }
                 }
                 for (const auto& staleRelease : staleReleases) {
-                    BQA_LOGV("Faking releaseBufferCallback from transactionCompleteCallback");
-                    BBQ_TRACE("FakeReleaseCallback");
+                   // BQA_LOGV("Faking releaseBufferCallback from transactionCompleteCallback");
+                   // BBQ_TRACE("FakeReleaseCallback");
                     releaseBufferCallbackLocked(staleRelease,
                         stat.previousReleaseFence ? stat.previousReleaseFence : Fence::NO_FENCE,
                         stat.currentMaxAcquiredBufferCount);
